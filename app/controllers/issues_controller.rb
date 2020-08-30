@@ -3,7 +3,7 @@ class IssuesController < ApplicationController
 
 
   def index
-    @issues = Issue.all
+    @issues = Issue.all.sort
   end
 
   def show
@@ -25,9 +25,19 @@ class IssuesController < ApplicationController
   end
 
   def edit
+    set_issue
   end
 
-  def delete
+  def update
+    set_issue
+    @issue.update(issue_params)
+    redirect_to issue_path(@issue)
+  end
+
+  def destroy
+    set_issue
+    @issue.delete
+    redirect_to archive_path
   end
 
   private
