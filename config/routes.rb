@@ -10,8 +10,9 @@ Rails.application.routes.draw do
     get 'imprint', to: 'pages#imprint'
     get 'privacy-policy', to: 'pages#privacy_policy'
 
-
     get 'archive', to: 'issues#index'
+
+    resources :issues, only: [:new, :show, :create, :destroy]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

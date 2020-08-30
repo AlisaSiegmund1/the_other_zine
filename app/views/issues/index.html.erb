@@ -1,1 +1,17 @@
 <p>ISSUE INDEX</p>
+
+<% @issues.each do |issue|%>
+<div class="issue-card">
+  <div class="issue-title">
+    <%= link_to issue_path(issue), class: 'go-away-url' do %>
+      <div>
+        ISSUE #<%=issue.id %>
+        <%= issue.title %>
+      </div>
+    <% end %>
+  </div>
+  <div class="issue-short-desc">
+    <%= issue.short_description %>
+  </div>
+</div>
+<% end %>
