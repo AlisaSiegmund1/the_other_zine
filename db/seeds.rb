@@ -1,5 +1,5 @@
 puts "Creating User"
-User.create!(email: "alisa.siegmund@mail.com", password: "123456", password_confirmation: "123456")
+User.create!(email: "alisa.siegmund@gmail.com", password: "123456", password_confirmation: "123456")
 puts "Created 1 User..."
 
 
