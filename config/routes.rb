@@ -5,6 +5,13 @@ Rails.application.routes.draw do
     get 'about', to: 'pages#about'
     get 'submissions', to: 'pages#submissions'
     get 'donations', to: 'pages#donations'
+    get 'terms-of-service', to: 'pages#terms_of_service'
+    get 'contact', to: 'pages#contact'
+    get 'imprint', to: 'pages#imprint'
+    get 'privacy-policy', to: 'pages#privacy_policy'
+
+
+    get 'archive', to: 'issues#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
