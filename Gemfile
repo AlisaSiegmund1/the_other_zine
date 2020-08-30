@@ -32,6 +32,9 @@ gem 'redis', '~> 4.0'
 #Environment variables
 gem 'dotenv-rails', groups: [:development, :test]
 
+#Image Hosting via cloudinary
+gem 'cloudinary', '~> 1.16.0'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
