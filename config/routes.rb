@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get 'contact', to: 'pages#contact'
     get 'imprint', to: 'pages#imprint'
     get 'privacy-policy', to: 'pages#privacy_policy'
+    get 'cms-dashboard', to: 'pages#cms_dashboard'
 
     get 'archive', to: 'issues#index'
 

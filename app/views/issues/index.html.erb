@@ -2,6 +2,9 @@
 
 <% @issues.each do |issue|%>
 <div class="issue-card">
+  <div class="issue-cover">
+    <%= cl_image_tag issue.photo.key, :width=>100, id: "issue-cover-show" %>
+  </div>
   <div class="issue-title">
     <%= link_to issue_path(issue), class: 'go-away-url' do %>
       <div>
