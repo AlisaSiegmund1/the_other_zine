@@ -1,11 +1,16 @@
-.base-container {
+#page-container {
   display: flex;
   justify-content: center;
 }
 
-.content-container {
+#content-container {
   width: 80vw;
   margin-top: 30px;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  margin-top: 230px; // Height of nav
+
 }
 
 
