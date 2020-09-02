@@ -18,7 +18,9 @@
         <%= render 'shared/flashes' %>
       </div>
       <div id='body'>
-        <%= yield %>
+        <div id='content-container'>
+          <%= yield %>
+        </div>
       </div>
       <div id='footer'>
         <%= render 'shared/footer' %>

@@ -1,5 +1,25 @@
 <p>DASHBOARD</p>
 
-<%= link_to 'Create Issue', new_issue_path %>
-<%= link_to 'Approve new contributions', '#' %>
+<div class="d-flex justify-content-around" style="margin-bottom:20px">
+  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">MANAGE ISSUES</button>
+  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">MANAGE CONTRIBUTIONS</button>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        <%= link_to 'Create new Issue', new_issue_path %>
+        <%= link_to 'Show unpublished Issues', "#" %>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        <%= link_to 'Latest contributions', '#' %>
+        <%= link_to 'Show unpublished Contributions', '#' %>
+      </div>
+    </div>
+  </div>
+</div>
 

@@ -3,7 +3,12 @@ class IssuesController < ApplicationController
 
 
   def index
-    @issues = Issue.all.sort
+    @publishedIssues = []
+
+     Issue.all.each do |issue|
+        @publishedIssues << issue if issue.publish == true
+      end
+    @issues = @publishedIssues.sort
   end
 
   def show
@@ -47,7 +52,7 @@ class IssuesController < ApplicationController
   end
 
    def issue_params
-    params.require(:issue).permit(:title, :short_description, :photo)
+    params.require(:issue).permit(:title, :short_description, :photo, :publish)
   end
 
 end
