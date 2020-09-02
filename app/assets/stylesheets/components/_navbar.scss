@@ -1,7 +1,6 @@
 .navbar-design {
   justify-content: space-between;
   background: white;
-  position: fixed;
   width: 100vw;
   z-index: 9999;
   top: 0;
@@ -26,3 +25,6 @@
   text-decoration: none;
 }
 
+.nav-link{
+  padding:0px;
+}
