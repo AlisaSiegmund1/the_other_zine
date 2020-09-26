@@ -13,6 +13,7 @@ class IssuesController < ApplicationController
 
   def show
     set_issue
+    @contribution = Contribution.new
   end
 
   def new

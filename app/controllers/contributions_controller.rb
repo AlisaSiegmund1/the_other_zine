@@ -2,7 +2,8 @@ class ContributionsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :new, :create]
 
   def new
-     @issue = Issue.new
+    @contribution = Contribution.new
+    @issue = Issue.find(params[:issue_id])
   end
 
   def create

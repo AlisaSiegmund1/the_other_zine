@@ -1,0 +1,11 @@
+<p>
+  What would you like to contribute?
+
+<%= simple_form_for ([@issue, @contribution]) do |f| %>
+  <%= f.input :contribution_type, collection: ['music, vide'], label:false%>
+<% end %>
+
+  <div class="collapsable-form">
+        <%= render 'shared/add_contribution_content'%>
+      </div>
+</p>
