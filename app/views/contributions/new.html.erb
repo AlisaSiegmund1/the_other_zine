@@ -2,7 +2,7 @@
   What would you like to contribute?
 
 <%= simple_form_for ([@issue, @contribution]) do |f| %>
-  <%= f.input :contribution_type, collection: ['music, vide'], label:false%>
+  <%= f.input :contribution_type, collection: ['music', 'video', 'text', 'project'], label:false%>
 <% end %>
 
   <div class="collapsable-form">
