@@ -1,15 +1,31 @@
-<p>
-  What would you like to contribute?
 
 <%= simple_form_for ([@issue, @contribution]) do |f| %>
+  <p>
+    What would you like to contribute?
+  </p>
   <%= f.input :contribution_type, collection: ['music', 'video', 'text', 'project'], label:false%>
   <%= f.input :contribution_content,label:false%>
+  <p>
+    Do you want your contribution to be public?
+  </p>
+
+  <%= f.input :public, label: "Publish contribution" %>
+
 <% end %>
 
-  <div class="collapsable-form">
-        <%= render 'shared/add_contribution_content'%>
+<!--   <div class="collapsable-form">
+        <#%= render 'shared/add_contribution_content'%>
+  </div>
+<div data-toggle="collapse" href="#collapsePubluc" role="button" aria-expanded="false" aria-controls="collapseStepAdd" class="add-step-link">
+  continue
+</div>
 
 
-        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/895958545&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/deepafterhour" title="Deep Afterhour" target="_blank" style="color: #cccccc; text-decoration: none;">Deep Afterhour</a> · <a href="https://soundcloud.com/ambientnorthernlight/reverb-of-life?in_system_playlist=charts-trending%3Aambient%3Ade" title="der mandant - blue&amp;happy" target="_blank" style="color: #cccccc; text-decoration: none;">der mandant - blue&amp;happy</a></div>
-      </div>
-</p>
+<div class="collapse" id="collapsePubluc">
+  <div class="card card-body ingredient-form" style="border: 0">
+
+    <#%= render 'shared/add_public' %>
+
+  </div>
+</div>
+ -->
