@@ -8,9 +8,17 @@
   <p>
     Do you want your contribution to be public?
   </p>
-
   <%= f.input :public, label: "Publish contribution" %>
+  <p>
+    Name
+  </p>
+  <%= f.input :author, label: false%>
+  <p>
+    Email
+  </p>
+  <%= f.input :email, label: false%>
 
+  <%= f.submit "Submit contribution"%>
 <% end %>
 
 <!--   <div class="collapsable-form">
