@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_26_192656) do
+ActiveRecord::Schema.define(version: 2020_10_04_183816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 2020_09_26_192656) do
     t.bigint "issue_id"
     t.string "author"
     t.string "email"
-    t.boolean "public"
     t.boolean "published"
     t.string "category"
     t.string "intention"
@@ -48,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_192656) do
     t.datetime "updated_at", null: false
     t.string "contribution_type"
     t.string "contribution_content"
+    t.boolean "approved"
     t.index ["issue_id"], name: "index_contributions_on_issue_id"
   end
 

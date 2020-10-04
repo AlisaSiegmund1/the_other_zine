@@ -24,3 +24,20 @@
   <%= link_to "new contribution", new_issue_contribution_path(@issue) %>
 </div>
 
+
+<div class="contributions_container">
+  <% @issue.contributions.each do |contribution| %>
+  <% if contribution.published == true %>
+    <div class="contribution">
+      <div class="type-tag">
+        <%= contribution.contribution_type %>
+      </div>
+      <div class="contribution-content">
+        <%= contribution.contribution_content %>
+      </div>
+      <div class="contribution-author">
+        <%= contribution.author %>
+      </div>
+      <% end %>
+    <% end %>
+</div>

@@ -9,9 +9,10 @@ class ContributionsController < ApplicationController
   def create
       @contribution = Contribution.new(contribution_params)
       @issue = Issue.find(params[:issue_id])
-      # @issue = Issue.find(params[:issue_id])
+      @contribution.issue = @issue
+
     if @contribution.save
-      redirect_to issue_path
+      redirect_to issue_path(@issue)
     else
       render :new
     end
@@ -25,7 +26,7 @@ class ContributionsController < ApplicationController
   private
 
   def contribution_params
-    params.require(:contribution).permit(:contribution_type, :contribution_content, :public, :author, :email)
+    params.require(:contribution).permit(:contribution_type, :contribution_content, :published, :author, :email)
 
   end
 
