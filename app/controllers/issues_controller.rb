@@ -1,5 +1,5 @@
 class IssuesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show]
+  skip_before_action :authenticate_user!, only: [ :index, :first, :second]
 
 
   def index
@@ -11,10 +11,10 @@ class IssuesController < ApplicationController
     @issues = @publishedIssues.sort
   end
 
-  def show
-    set_issue
-    @contribution = Contribution.new
-  end
+  # def show
+  #   set_issue
+  #   @contribution = Contribution.new
+  # end
 
   def new
     @issue = Issue.new
@@ -27,7 +27,6 @@ class IssuesController < ApplicationController
     else
       render :new
     end
-
   end
 
   def edit
@@ -44,6 +43,15 @@ class IssuesController < ApplicationController
     set_issue
     @issue.delete
     redirect_to archive_path
+  end
+
+# ALL ISSUES -------------------------------------------------------------------
+  def first
+    @issue = Issue.first
+  end
+
+  def second
+    @issue = Issue.find(2)
   end
 
   private

@@ -1,0 +1,22 @@
+<!-- AUTOMATED CMS OPTIONS -->
+<% if user_signed_in? %>
+  <%= link_to 'edit', edit_issue_path(@issue) %>
+  <%= link_to 'delete', issue_path(@issue),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+<% end %>
+
+<!-- AUTOMATED ISSUE DATA-->
+<%= render "issues/shared/issue_content", issue: @issue%>
+
+
+<!-- CUSTOM ISSUE DATA-->
+
+
+<!-- AUTOMATED CONTRIBUTIONS -->
+<div class="new-contribution">
+  <%= link_to "new contribution", new_issue_contribution_path(@issue) %>
+</div>
+
+<%= render "issues/shared/contributions", issue: @issue%>
+</div>

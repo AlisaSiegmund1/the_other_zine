@@ -12,8 +12,10 @@ Rails.application.routes.draw do
     get 'cms-dashboard', to: 'pages#cms_dashboard'
 
     get 'archive', to: 'issues#index'
+    get 'issues/1', to: 'issues#first'
+    get 'issues/2', to: 'issues#second'
 
-    resources :issues, only: [:new, :show, :edit, :update, :create, :destroy] do
+    resources :issues, only: [:new, :edit, :update, :create, :destroy] do
       resources :contributions, only: [:new, :create, :destroy]
     end
 

@@ -1,29 +1,3 @@
-<% if user_signed_in? %>
-  <%= link_to 'edit', edit_issue_path(@issue) %>
-  <%= link_to 'delete', issue_path(@issue),
-        method: :delete,
-        data: { confirm: "Are you sure?" } %>
-<% end %>
-
-
-<div class="issue-cover">
-  <%= cl_image_tag @issue.photo.key, :width=>100, id: "issue-cover-show" %>
-</div>
-
-<div class="issue-title">
-  <h1>ISSUE #<%= @issue.id %><%=@issue.title %></h1>
-</div>
-
-<div class="issue-short-desc">
-  <%= @issue.short_description %>
-</div>
-
-
-<div class="new-contribution">
-  <%= link_to "new contribution", new_issue_contribution_path(@issue) %>
-</div>
-
-
 <div class="contributions_container">
 <h2>Contributions</h2>
 
@@ -47,6 +21,4 @@
       <% end %>
     <% end %>
   </div>
-
   </div>
-</div>
