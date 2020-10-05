@@ -7,9 +7,9 @@ class ContributionsController < ApplicationController
   end
 
   def create
-      @contribution = Contribution.new(contribution_params)
-      @issue = Issue.find(params[:issue_id])
-      @contribution.issue = @issue
+    @contribution = Contribution.new(contribution_params)
+    @issue = Issue.find(params[:issue_id])
+    @contribution.issue = @issue
 
     if @contribution.save
       redirect_to issue_path(@issue)
