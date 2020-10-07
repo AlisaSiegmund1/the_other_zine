@@ -1,4 +1,4 @@
 <%= simple_form_for ([@issue, @contribution]) do |f| %>
-  <%= f.input :contribution_type, collection: ['music', 'video', 'text', 'project'], label:false%>
+  <%= f.input :contribution_type, collection: ['listen', 'watch', 'read', 'cooperate', 'view'], label:false%>
   <%= f.input :contribution_content,label:false%>
 <% end %>

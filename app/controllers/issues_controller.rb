@@ -46,22 +46,22 @@ class IssuesController < ApplicationController
   end
 
 # ALL ISSUES -------------------------------------------------------------------
-def first
-  @issue = Issue.first
-end
+  def first
+    @issue = Issue.first
+  end
 
-def second
-  @issue = Issue.find(2)
-end
+  def second
+    @issue = Issue.find(2)
+  end
 
-private
+  private
 
-def set_issue
-  @issue = Issue.find(params[:id])
-end
+  def set_issue
+    @issue = Issue.find(params[:id])
+  end
 
-def issue_params
-  params.require(:issue).permit(:title, :short_description, :photo, :publish)
-end
+  def issue_params
+    params.require(:issue).permit(:title, :short_description, :photo, :publish)
+  end
 
 end

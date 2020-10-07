@@ -31,4 +31,14 @@ class PagesController < ApplicationController
   end
 
 
+  def all_contributions
+    @contributions = Contribution.all.sort
+  end
+
+
+  def unapproved_contributions
+    @contributions = Contribution.all
+  end
+
+
 end

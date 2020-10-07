@@ -10,13 +10,14 @@ Rails.application.routes.draw do
     get 'imprint', to: 'pages#imprint'
     get 'privacy-policy', to: 'pages#privacy_policy'
     get 'cms-dashboard', to: 'pages#cms_dashboard'
+    get 'all-contributions', to: 'pages#all_contributions'
 
     get 'archive', to: 'issues#index'
     get 'issues/1', to: 'issues#first'
     get 'issues/2', to: 'issues#second'
 
     resources :issues, only: [:new, :edit, :update, :create, :destroy] do
-      resources :contributions, only: [:new, :create, :destroy]
+      resources :contributions, only: [:new, :create, :destroy, :edit]
     end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
