@@ -3,21 +3,8 @@
   <p>
     What would you like to contribute?
   </p>
-  <%= f.input :contribution_type, collection: ['music', 'video', 'text', 'project'], label:false%>
-  <%= f.input :contribution_content,label:false%>
+  <%= f.input :type, collection: ['music', 'video', 'text', 'project'], label:false%>
   <p>
-    Do you want your contribution to be public?
-  </p>
-  <%= f.input :published, label: "Publish contribution" %>
-  <p>
-    Name
-  </p>
-  <%= f.input :author, label: false%>
-  <p>
-    Email
-  </p>
-  <%= f.input :email, label: false%>
-
   <%= f.submit "Submit contribution"%>
 <% end %>
 
