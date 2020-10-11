@@ -17,7 +17,10 @@ Rails.application.routes.draw do
     get 'issues/2', to: 'issues#second'
 
     resources :issues, only: [:new, :edit, :update, :create, :destroy] do
-      resources :contributions, only: [:new, :create, :destroy, :edit]
+      resources :contributions, only: [:new, :create, :destroy, :edit] do
+        resources :contribution_infos, only: [:new, :create, :destroy, :edit]
+        resources :contribution_contents, only: [:new, :create, :destroy, :edit]
+      end
     end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
