@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_04_183816) do
+ActiveRecord::Schema.define(version: 2020_10_07_182514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,18 +36,23 @@ ActiveRecord::Schema.define(version: 2020_10_04_183816) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "contributions", force: :cascade do |t|
-    t.bigint "issue_id"
-    t.string "author"
-    t.string "email"
-    t.boolean "published"
-    t.string "category"
-    t.string "intention"
+  create_table "contribution_contents", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "contribution_type"
-    t.string "contribution_content"
+  end
+
+  create_table "contribution_infos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contributions", force: :cascade do |t|
+    t.bigint "issue_id"
+    t.boolean "published"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "approved"
+    t.string "type"
     t.index ["issue_id"], name: "index_contributions_on_issue_id"
   end
 
@@ -57,6 +62,11 @@ ActiveRecord::Schema.define(version: 2020_10_04_183816) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "publish"
+  end
+
+  create_table "personal_infos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

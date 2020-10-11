@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :about, :donations, :submissions, :imprint, :privacy_policy, :terms_of_service, :contact]
 
   def home
-    @issue = Issue.last
+    @issue = Issue.first
   end
 
   def about

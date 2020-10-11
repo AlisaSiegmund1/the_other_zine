@@ -1,0 +1,2 @@
+class ContributionInfo < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class ContributionContent < ApplicationRecord
+end
