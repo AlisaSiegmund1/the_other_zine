@@ -12,11 +12,14 @@ class ContributionsController < ApplicationController
     @contribution.issue = @issue
 
     if @contribution.save
-      redirect_to issue_path(@issue)
+      redirect_to issue_contribution_path(@contribution, @issue)
     else
       render :new
     end
+  end
 
+  def show
+    @contribution = Contribution.find(params[:id])
   end
 
   def destroy
