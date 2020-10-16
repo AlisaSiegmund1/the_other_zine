@@ -12,7 +12,7 @@ class ContributionsController < ApplicationController
     @contribution.issue = @issue
 
     if @contribution.save
-      #redirect_to issue_contribution_path(@contribution, @issue)
+      redirect_to issue_path( @issue)
     else
       render :new
     end
@@ -29,7 +29,7 @@ class ContributionsController < ApplicationController
   private
 
   def contribution_params
-    params.require(:contribution).permit(:contribution_type, :contribution_content, :published, :author, :email)
+    params.require(:contribution).permit(:type, :content, :link, :photo, :published, :name, :email)
 
   end
 

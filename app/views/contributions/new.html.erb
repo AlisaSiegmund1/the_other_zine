@@ -8,16 +8,24 @@
     Tell us something about your contribution:
   </p>
   <%= f.input :content, label:false %>
-  <p>
-    Link ressources:
-  </p>
-  <%= f.input :link, label:false  %>
-  <p>
-    Upload images:
-  </p>
-  <%= f.input :photo, as: :file, label:false  %>
 
-  <p>
+  <div class="d-flex justify-content-between">
+    <div>
+      <p>
+        Link ressources:
+      </p>
+      <%= f.input :link, label:false  %>
+    </div>
+    <div>
+      <p>
+        Upload images:
+      </p>
+      <%= f.input :photo, as: :file, label:false  %>
+    </div>
+
+    <p>
+
+  </div>
     What's your name?
   </p>
   <%= f.input :name, label:false  %>
