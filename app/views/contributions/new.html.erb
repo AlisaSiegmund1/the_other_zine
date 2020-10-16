@@ -1,10 +1,35 @@
 
 <%= simple_form_for ([@issue, @contribution]) do |f| %>
   <p>
-    What would you like to contribute?
+    I want to contribute something to...
   </p>
-  <%= f.input :type, collection: ['music', 'video', 'text', 'project'], label:false%>
+  <%= f.input :type, collection: ['see', 'read', 'view', 'contribute', 'watch'], label:false%>
   <p>
+    Tell us something about your contribution:
+  </p>
+  <%= f.input :content, label:false %>
+  <p>
+    Link ressources:
+  </p>
+  <%= f.input :link, label:false  %>
+  <p>
+    Upload images:
+  </p>
+  <%= f.input :photo, as: :file, label:false  %>
+
+  <p>
+    What's your name?
+  </p>
+  <%= f.input :name, label:false  %>
+  <p>
+    What's your Email?
+  </p>
+  <%= f.input :email, label:false  %>
+  <p>
+    Do you want your contribution to be published?
+  </p>
+  <%= f.input :published, label:false  %>
+
   <%= f.submit "Submit contribution"%>
 <% end %>
 
