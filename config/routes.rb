@@ -18,8 +18,6 @@ Rails.application.routes.draw do
 
     resources :issues, only: [:new, :edit, :update, :create, :destroy] do
       resources :contributions, only: [:new, :create, :show, :destroy, :edit] do
-        resources :contribution_infos, only: [:new, :create, :destroy, :edit]
-        resources :contribution_contents, only: [:new, :create, :destroy, :edit]
       end
     end
 

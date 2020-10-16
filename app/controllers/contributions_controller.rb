@@ -12,7 +12,7 @@ class ContributionsController < ApplicationController
     @contribution.issue = @issue
 
     if @contribution.save
-      redirect_to issue_contribution_path(@contribution, @issue)
+      #redirect_to issue_contribution_path(@contribution, @issue)
     else
       render :new
     end
