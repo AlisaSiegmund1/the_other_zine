@@ -5,17 +5,13 @@
   <% if contribution.published == true %>
   <div class="contribution">
     <div class="type-tag">
-      <%= contribution.contribution_type %>
+      <%= contribution.type %>
     </div>
     <div class="contribution-content">
-      <% if contribution.contribution_type == 'music' %>
-      <a href=<%= contribution.contribution_content %>> <%= contribution.contribution_content %></a>
-      <% else %>
-      <%= contribution.contribution_content %>
-      <% end %>
+      <%= contribution.content %>
     </div>
     <div class="contribution-author">
-      <%= contribution.author %>
+      <%= contribution.name %>
     </div>
   </div>
   <% end %>
