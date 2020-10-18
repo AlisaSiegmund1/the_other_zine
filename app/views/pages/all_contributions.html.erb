@@ -9,8 +9,8 @@
   </tr>
 <% @contributions.each do |contribution| %>
   <tr>
-    <td><%= contribution.contribution_type %></td>
-    <td><%= contribution.contribution_content[0..30] ...%></td>
+    <td><%= contribution.con_type %></td>
+    <td><%= contribution.content[0..30] ...%></td>
     <td><%= contribution.email%></td>
     <td>Issue #<%= contribution.issue_id %></td>
     <td><%= link_to 'edit', '#' %></td>

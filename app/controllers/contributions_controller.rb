@@ -29,7 +29,7 @@ class ContributionsController < ApplicationController
   private
 
   def contribution_params
-    params.require(:contribution).permit(:type, :content, :link, :photo, :published, :name, :email)
+    params.require(:contribution).permit(:con_type, :content, :link, :photo, :published, :name, :email)
 
   end
 

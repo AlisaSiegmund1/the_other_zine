@@ -1,6 +1,6 @@
 class AddColumToContributions < ActiveRecord::Migration[5.2]
   def change
-    add_column :contributions, :con_type
+    add_column :contributions, :con_type, :string
 
   end
 end
