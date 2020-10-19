@@ -38,7 +38,6 @@ class ContributionsController < ApplicationController
   def destroy
     @issue = Issue.find(params[:id])
     @contribution = Contribution.find(params[:issue_id])
-    set_contribution
     @contribution.delete
     redirect_to all_contributions_path
   end
