@@ -18,7 +18,11 @@
     <td><%= contribution.approved %></td>
     <td><%= link_to 'show', issue_contribution_path(contribution, contribution.issue_id) %></td>
     <td><%= link_to 'edit', edit_issue_contribution_path(contribution, contribution.issue_id) %></td>
-    <td><%= link_to 'delete', '#'%></td>
+    <td><%= link_to 'delete', issue_contribution_path(contribution, contribution.issue_id),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %></td>
+
+
   </tr>
   <% end %>
 </table>

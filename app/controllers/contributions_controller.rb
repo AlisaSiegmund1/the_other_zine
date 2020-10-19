@@ -3,12 +3,12 @@ class ContributionsController < ApplicationController
 
   def new
     @contribution = Contribution.new
-    @issue = Issue.find(params[:issue_id])
+    set_issue
   end
 
   def create
     @contribution = Contribution.new(contribution_params)
-    @issue = Issue.find(params[:issue_id])
+    set_issue
     @contribution.issue = @issue
 
     if @contribution.save
@@ -29,24 +29,28 @@ class ContributionsController < ApplicationController
   end
 
   def update
-    @issue = Issue.find(params[:issue_id])
-    @contribution = Contribution.find(params[:id])
+    set_issue
+    set_contribution
     @contribution.update(contribution_params)
     redirect_to cms_dashboard_path
   end
 
   def destroy
+    set_issue
+    set_contribution
+    @contribution.delete
+    redirect_to all_contributions_path
   end
 
 
   private
 
   def set_issue
-    @issue = Issue.find(params[:id])
+    @issue = Issue.find(params[:issue_id])
   end
 
   def set_contribution
-    @contribution = Contribution.find(params[:issue_id])
+    @contribution = Contribution.find(params[:id])
   end
 
 
