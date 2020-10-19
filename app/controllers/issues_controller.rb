@@ -1,5 +1,5 @@
 class IssuesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :first, :second]
+  skip_before_action :authenticate_user!, only: [ :index, :first, :second, :third]
 
 
   def index
@@ -54,7 +54,7 @@ class IssuesController < ApplicationController
     @issue = Issue.find(2)
   end
 
-  def second
+  def third
     @issue = Issue.find(3)
   end
 

@@ -2,8 +2,9 @@
   <%= cl_image_tag @issue.photo.key, :width=>100, id: "issue-cover-show" %>
 </div>
 <div class="issue-title">
-  ISSUE # <%= @issue.id %>
-  <%= @issue.title %>
+  <h1>ISSUE # <%= @issue.id %><%= @issue.title %></h1>
+
+
 </div>
 <div class="issue-short-desc">
   <%= @issue.short_description %>
