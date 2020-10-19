@@ -1,38 +1,41 @@
  <div class="row justify-content-md-center mt-5">
-  <%= simple_form_for ([@issue, @contribution]) do |f| %>
+  <div class="col-lg-6">
+    <%= simple_form_for ([@issue, @contribution]) do |f| %>
 
-    <p>I want to contribute something to...</p>
-    <%= f.input :con_type, collection: ['see', 'read', 'view', 'contribute', 'watch'], label:false%>
+      <p>I want to contribute something to...</p>
+      <%= f.input :con_type, collection: ['see', 'read', 'view', 'contribute', 'watch'], label:false%>
 
-    <p>Tell us something about your contribution:</p>
-    <%= f.input :content, label:false %>
+      <p>Tell us something about your contribution:</p>
+      <%= f.input :content, label:false %>
 
-    <div class="d-flex justify-content-between">
-      <div>
-        <p>Link ressources:</p>
-        <%= f.input :link, label:false  %>
+      <div class="d-flex justify-content-between">
+        <div>
+          <p>Link ressources:</p>
+          <%= f.input :link, label:false  %>
+        </div>
+        <div>
+          <p>Upload images:</p>
+          <%= f.input :photo, as: :file, label:false %>
+        </div>
       </div>
-      <div>
-        <p>Upload images:</p>
-        <%= f.input :photo, as: :file, label:false %>
-      </div>
-    </div>
 
-    <div class="d-flex justify-content-between">
-      <div>
-        <p>What's your name?</p>
-        <%= f.input :name, label:false  %>
+      <div class="d-flex justify-content-between">
+        <div>
+          <p>What's your name?</p>
+          <%= f.input :name, label:false  %>
+        </div>
+        <div>
+          <p>What's your Email?</p>
+          <%= f.input :email, label:false  %>
+        </div>
       </div>
-      <div>
-        <p>What's your Email?</p>
-        <%= f.input :email, label:false  %>
-      </div>
-    </div>
 
-    <%= f.input :published, label: "Yes, I want my contribution to be public"  %>
+      <%= f.input :published, label: "Yes, I want my contribution to be public"  %>
 
-    <p>** We will review all contributions out of... reasons **</p>
-    <%= f.submit "Submit contribution", :class => "btn-v1" %>
-  <% end %>
+      <p>** We will review all contributions out of... reasons **</p>
+      <%= f.submit "Submit contribution", :class => "btn-v1" %>
+    <% end %>
+
+</div>
 
 </div>
