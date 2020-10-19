@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     get 'issues/2', to: 'issues#second'
 
     resources :issues, only: [:new, :edit, :update, :create, :destroy] do
-      resources :contributions, only: [:new, :create, :show, :destroy, :edit] do
+      resources :contributions, only: [:new, :create, :show, :update, :destroy, :edit] do
       end
     end
 
