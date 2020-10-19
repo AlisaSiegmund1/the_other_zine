@@ -1,7 +1,6 @@
 <div class="contributions_container">
   <h2>Contributions</h2>
 
-
   <div class="contribution">
     <div class="type-tag">
       <%= @contribution.con_type %>
@@ -11,12 +10,12 @@
     </div>
     <div class="contribution-link">
       <% if !@contribution.link.empty?%>
-        <a href=<%= @contribution.link %>><%= @contribution.link %> </a>
+      <a href=<%= @contribution.link %>><%= @contribution.link %> </a>
       <% end %>
     </div>
     <div class="contribution-photo">
       <% if !@contribution.photo.nil?%>
-        <%= cl_image_tag @contribution.photo%>
+      <%= cl_image_tag @contribution.photo%>
       <% end %>
     </div>
     <div class="contribution-author">
