@@ -10,15 +10,9 @@
   flex-grow: 1;
 }
 
-
-.navbar-design .navbar-collapse {
-  flex-grow: 0;
-}
-
 .navbar-design .navbar-brand img {
   width: 40px;
 }
-
 
 .nav-head {
   color: black;
@@ -33,9 +27,6 @@
 .nav-link{
   padding:0px;
 }
-
-// Burger Menue
-
 
 #menuToggle input
 {
@@ -57,8 +48,6 @@
 #menuToggle {
     padding-left: 20px;
 }
-
-
 
 #menuToggle span
 {
@@ -90,7 +79,6 @@
   transform-origin: 0% 100%;
 }
 
-
 /*
  * Transform all the slices of hamburger
  * into a crossmark.
@@ -118,7 +106,6 @@
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
-
 
 #menu
 {
