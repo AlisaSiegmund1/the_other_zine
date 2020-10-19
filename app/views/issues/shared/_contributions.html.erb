@@ -2,7 +2,7 @@
   <h2>Contributions</h2>
 
   <% @issue.contributions.each do |contribution| %>
-    <% if contribution.published == true %>
+    <% if contribution.published == true && contribution.approved == true%>
       <div class="contribution">
         <div class="type-tag">
           <%= contribution.con_type %>

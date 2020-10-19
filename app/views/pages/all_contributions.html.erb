@@ -4,6 +4,8 @@
     <th>Content</th>
     <th>Email</th>
     <th>Issue</th>
+    <th>Approved</th>
+    <th>Show</th>
     <th>Edit</th>
     <th>Delete</th>
   </tr>
@@ -13,6 +15,7 @@
       <td><%= contribution.content[0..30] ...%></td>
       <td><%= contribution.email%></td>
       <td>Issue #<%= contribution.issue_id %></td>
+      <td><%= contribution.approved %></td>
       <td><%= link_to 'show', issue_contribution_path(contribution, contribution.issue_id) %></td>
       <td><%= link_to 'edit', edit_issue_contribution_path(contribution, contribution.issue_id) %></td>
       <td><%= link_to 'delete', '#'%></td>

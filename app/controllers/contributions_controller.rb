@@ -8,7 +8,7 @@ class ContributionsController < ApplicationController
 
   def create
     @contribution = Contribution.new(contribution_params)
-    set_issue
+    @issue = Issue.find(params[:issue_id])
     @contribution.issue = @issue
 
     if @contribution.save

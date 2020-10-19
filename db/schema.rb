@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_10_18_115318) do
     t.bigint "issue_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "approved"
+    t.boolean "approved", :default => false
     t.string "link"
     t.text "content"
     t.string "name"
