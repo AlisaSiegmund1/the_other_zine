@@ -19,6 +19,7 @@ class ContributionsController < ApplicationController
   end
 
   def show
+    set_issue
     set_contribution
   end
 
@@ -41,11 +42,11 @@ class ContributionsController < ApplicationController
   private
 
   def set_issue
-    @issue = Issue.find(params[:issue_id])
+    @issue = Issue.find(params[:id])
   end
 
   def set_contribution
-    @contribution = Contribution.find(params[:id])
+    @contribution = Contribution.find(params[:issue_id])
   end
 
 

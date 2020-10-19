@@ -7,14 +7,15 @@
     <th>Edit</th>
     <th>Delete</th>
   </tr>
-<% @contributions.each do |contribution| %>
-  <tr>
-    <td><%= contribution.con_type %></td>
-    <td><%= contribution.content[0..30] ...%></td>
-    <td><%= contribution.email%></td>
-    <td>Issue #<%= contribution.issue_id %></td>
-    <td><%= link_to 'edit', edit_issue_contribution_path(contribution, contribution.issue_id) %></td>
-    <td><%= link_to 'delete', '#'%></td>
-  </tr>
+  <% @contributions.each do |contribution| %>
+    <tr>
+      <td><%= contribution.con_type %></td>
+      <td><%= contribution.content[0..30] ...%></td>
+      <td><%= contribution.email%></td>
+      <td>Issue #<%= contribution.issue_id %></td>
+      <td><%= link_to 'show', issue_contribution_path(contribution, contribution.issue_id) %></td>
+      <td><%= link_to 'edit', edit_issue_contribution_path(contribution, contribution.issue_id) %></td>
+      <td><%= link_to 'delete', '#'%></td>
+    </tr>
   <% end %>
 </table>

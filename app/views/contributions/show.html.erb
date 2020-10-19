@@ -1,1 +1,28 @@
-<%= link_to "continue", new_issue_contribution_contribution_content_path %>
+<div class="contributions_container">
+  <h2>Contributions</h2>
+
+
+  <div class="contribution">
+    <div class="type-tag">
+      <%= @contribution.con_type %>
+    </div>
+    <div class="contribution-content">
+      <%= @contribution.content %>
+    </div>
+    <div class="contribution-link">
+      <% if !@contribution.link.empty?%>
+        <a href=<%= @contribution.link %>><%= @contribution.link %> </a>
+      <% end %>
+    </div>
+    <div class="contribution-photo">
+      <% if !@contribution.photo.nil?%>
+        <%= cl_image_tag @contribution.photo%>
+      <% end %>
+    </div>
+    <div class="contribution-author">
+      <%= @contribution.name %>
+    </div>
+  </div>
+</div>
+
+
