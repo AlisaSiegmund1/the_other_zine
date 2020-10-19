@@ -1,13 +1,12 @@
-<p>HOME = CURRENT ISSUE</p>
-  <div class="issue-cover">
-    <%= cl_image_tag @issue.photo.key, :width=>100, id: "issue-cover-show" %>
-  </div>
-  <div class="issue-title">
-    ISSUE # <%= @issue.id %>
-    <%= @issue.title %>
-  </div>
-  <div class="issue-short-desc">
-    <%= @issue.short_description %>
-  </div>
+<div class="issue-cover">
+  <%= cl_image_tag @issue.photo.key, :width=>100, id: "issue-cover-show" %>
+</div>
+<div class="issue-title">
+  ISSUE # <%= @issue.id %>
+  <%= @issue.title %>
+</div>
+<div class="issue-short-desc">
+  <%= @issue.short_description %>
+</div>
 
 
