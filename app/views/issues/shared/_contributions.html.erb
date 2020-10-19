@@ -8,8 +8,13 @@
   <% @issue.contributions.each do |contribution| %>
     <% if contribution.published == true && contribution.approved == true%>
       <div class="contribution">
-        <div class="tag">
-          # <%= contribution.con_type %>
+        <div class="tags d-flex">
+          <div class="tag">
+            # <%= contribution.con_type %>
+          </div>
+          <div class="tag">
+            # Issue No.<%= contribution.issue_id %>
+          </div>
         </div>
       <div class="contribution-content">
         <%= contribution.content %>
