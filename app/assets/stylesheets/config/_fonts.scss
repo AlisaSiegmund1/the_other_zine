@@ -25,6 +25,20 @@ $headers-font: "Caudex";
 }
 
 
+body a {
+  color: black;
+  font-style: bolder;
+  border-bottom: 1px solid white;
+  padding-bottom: 3px;
+}
+
+body a:hover {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 3px;
+}
+
 /* Extra extra small devices (phones, 360px and down) */
 @media only screen and (max-width: 350px) {
    body {

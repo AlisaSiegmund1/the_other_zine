@@ -1,9 +1,10 @@
 <div class="contributions_container">
   <h2>Contributions</h2>
 
-<div class="new-contribution">
+<div class="btn-v1">
   <%= link_to "new contribution", new_issue_contribution_path(@issue) %>
 </div>
+
   <% @issue.contributions.each do |contribution| %>
     <% if contribution.published == true && contribution.approved == true%>
       <div class="contribution">

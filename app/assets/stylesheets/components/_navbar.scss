@@ -19,13 +19,13 @@
   font-size: 25px;
 }
 
+.nav-head:hover {
+    border-bottom: none;
+  }
+
 .nav-head:hover{
   color: black;
   text-decoration: none;
-}
-
-.nav-link{
-  padding:0px;
 }
 
 #menuToggle input

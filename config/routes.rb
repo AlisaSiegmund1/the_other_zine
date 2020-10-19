@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get 'archive', to: 'issues#index'
     get 'issues/1', to: 'issues#first'
     get 'issues/2', to: 'issues#second'
+    get 'issues/3', to: 'issues#third'
 
     resources :issues, only: [:new, :edit, :update, :create, :destroy] do
       resources :contributions, only: [:new, :create, :show, :update, :destroy, :edit] do

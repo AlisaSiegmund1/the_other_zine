@@ -54,6 +54,10 @@ class IssuesController < ApplicationController
     @issue = Issue.find(2)
   end
 
+  def second
+    @issue = Issue.find(3)
+  end
+
   private
 
   def set_issue
