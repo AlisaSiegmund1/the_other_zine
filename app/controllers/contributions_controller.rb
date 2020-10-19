@@ -29,8 +29,8 @@ class ContributionsController < ApplicationController
   end
 
   def update
-    @issue = Issue.find(params[:id])
-    @contribution = Contribution.find(params[:issue_id])
+    @issue = Issue.find(params[:issue_id])
+    @contribution = Contribution.find(params[:id])
     @contribution.update(contribution_params)
     redirect_to cms_dashboard_path
   end

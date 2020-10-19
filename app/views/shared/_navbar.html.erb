@@ -1,4 +1,23 @@
+<nav role="navigation">
 <div class="navbar navbar-expand-sm navbar-light navbar-design">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <!--Some spans to act as a hamburger.-->
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul id="menu">
+        <%= link_to "ARCHIVE", archive_path, class: "nav-link" %>
+        <%= link_to "ABOUT", about_path, class: "nav-link" %>
+        <%= link_to "DONATIONS", donations_path, class: "nav-link" %>
+        <%= link_to "SUBMISSIONS", submissions_path, class: "nav-link" %>
+        <% if user_signed_in? %>
+      <%= link_to 'Dashboard', cms_dashboard_path %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <% end %>
+      </ul>
+    </div>
   <div class="page_head">
     <%= link_to root_path, class: "nav-head" do %>
       <%= cl_image_tag("https://res.cloudinary.com/siggimsiggi/image/upload/v1601141433/logo_gpj3jm.png", :width=>200) %>
@@ -7,55 +26,8 @@
   <div class="claim">
     <p> a collaborative platform to un:learn, re:think, re:imagine through lived experiences & the emotive </p>
   </div>
-  <div class="nav-links">
-    <%= link_to "ARCHIVE", archive_path, class: "nav-link" %>
-    <%= link_to "ABOUT", about_path, class: "nav-link" %>
-    <%= link_to "DONATIONS", donations_path, class: "nav-link" %>
-    <%= link_to "SUBMISSIONS", submissions_path, class: "nav-link" %>
-  </div>
-  <div class="log_out">
-    <% if user_signed_in? %>
-      <%= link_to 'Dashboard', cms_dashboard_path %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-    <% end %>
-  </div>
-</div>
 
 
 
 
-
-
-  <%#= link_to "#", class: "navbar-brand" do %>
-    <%#= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <%# end %>
-
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
- -->
-
- <!--  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <#% if user_signed_in? %>
-        <li class="nav-item active">
-          <%#= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%#= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%#= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%#= link_to "Action", "#", class: "dropdown-item" %>
-            <%#= link_to "Another action", "#", class: "dropdown-item" %>
-            <%#= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <%# else %>
-        <li class="nav-item">
-          <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <%# end %>
-    </ul>
-  </div> -->
+</nav>

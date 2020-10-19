@@ -19,8 +19,8 @@
         <% end %>
       </div>
       <div class="contribution-photo">
-        <% if !contribution.photo.nil?%>
-          <%= cl_image_tag contribution.photo%>
+        <% if contribution.photo.attached?%>
+          <%= cl_image_tag contribution.photo.key%>
         <% end %>
       </div>
       <div class="contribution-author">
