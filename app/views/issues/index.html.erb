@@ -1,22 +1,23 @@
 <div id="issue-container">
   <% @issues.each do |issue|%>
   <div class="issue-card">
-    <div>
+
       <div class="issue-cover">
         <%= cl_image_tag issue.photo.key, :width=>150, :height=>150, id: "issue-cover-show" %>
       </div>
-      <div class="issue-title">
-        <%= link_to issue_path(issue), class: 'go-away-url' do %>
-        <div>
-          ISSUE #<%=issue.id %>
-          <%= issue.title %>
+      <div class="issue-info">
+        <div class="issue-title">
+          <%= link_to issue_path(issue), class: 'go-away-url' do %>
+          <div>
+            ISSUE #<%=issue.id %>
+            <%= issue.title %>
+          </div>
+          <% end %>
         </div>
-        <% end %>
-      </div>
+        <div class="issue-short-desc">
+          <%= issue.short_description %>
+        </div>
 
-    </div>
-      <div class="issue-short-desc">
-        <%= issue.short_description %>
       </div>
   </div>
   <% end %>
