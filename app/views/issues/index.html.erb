@@ -1,4 +1,25 @@
- <div class="row justify-content-md-center mt-5">
+ <div class="row justify-content-md-center">
+  <% @issues.each do |issue|%>
+    <%= link_to issue_path(issue), class: 'go-away-url' do %>
+      <div class="issue-card">
+        <div class="issue-cover">
+          <%= cl_image_tag issue.photo.key, :width=>150, :height=>150, id: "issue-cover-show" %>
+        </div>
+        <div class="issue-info">
+          <div class="issue-title">
+            <div>
+              ISSUE #<%=issue.id %>
+              <%= issue.title %>
+            </div>
+          </div>
+          <div class="issue-short-desc">
+            <%= issue.short_description %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
   <% @issues.each do |issue|%>
     <%= link_to issue_path(issue), class: 'go-away-url' do %>
       <div class="issue-card">
@@ -20,3 +41,5 @@
     <% end %>
   <% end %>
 </div>
+
+
