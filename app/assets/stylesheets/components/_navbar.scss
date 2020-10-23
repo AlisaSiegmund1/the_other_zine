@@ -20,8 +20,8 @@
 }
 
 .nav-head:hover {
-    border-bottom: none;
-  }
+  border-bottom: none;
+}
 
 .nav-head:hover{
   color: black;
@@ -34,8 +34,8 @@
   width: 40px;
   height: 32px;
   position: absolute;
-  top: 48px;
-  left: 23px;
+  top: 0px;
+  left: 17px;
 
   cursor: pointer;
 
@@ -47,6 +47,9 @@
 
 #menuToggle {
     padding-left: 20px;
+    position: absolute;
+    top: 30px;
+
 }
 
 #menuToggle span
@@ -139,4 +142,23 @@
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+
+
+
+/* Extra extra small devices (phones, 360px and down) */
+@media only screen and (max-width: 350px) {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 350px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .claim {
+    width: 340px;
+    margin-left: 5px;
+}
+
 }
