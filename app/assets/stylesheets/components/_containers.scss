@@ -9,7 +9,7 @@ body {
    height: 50px;
    position: fixed;
    top:0;
-   z-index: 20;
+
 }
 #body {
    padding:10px;
@@ -33,6 +33,11 @@ body {
   width: 75vw;
   margin-top: 50px;
 }
+
+.contributions-container {
+  margin-top: 100px;
+}
+
 
 
 #issue-container {

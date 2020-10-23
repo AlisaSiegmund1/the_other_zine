@@ -1,18 +1,15 @@
- <div class="row justify-content-md-center">
-  <!-- AUTOMATED CMS OPTIONS -->
-  <% if user_signed_in? %>
-    <%= link_to 'edit', edit_issue_path(@issue) %>
-    <%= link_to 'delete', issue_path(@issue),
-          method: :delete,
-          data: { confirm: "Are you sure?" } %>
-  <% end %>
+<!-- AUTOMATED CMS OPTIONS -->
+<% if user_signed_in? %>
+  <%= link_to 'edit', edit_issue_path(@issue) %>
+  <%= link_to 'delete', issue_path(@issue),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+<% end %>
 
-  <!-- AUTOMATED ISSUE DATA-->
-  <%= render "issues/shared/issue_content", issue: @issue%>
+<!-- AUTOMATED ISSUE DATA-->
+<%= render "issues/shared/issue_content", issue: @issue%>
 
-  <!-- CUSTOM ISSUE DATA-->
-
-  <!-- AUTOMATED CONTRIBUTIONS -->
-  <%= render "issues/shared/contributions", issue: @issue%>
-  </div>
+<!-- CUSTOM ISSUE DATA-->
+<!-- AUTOMATED CONTRIBUTIONS -->
+<%= render "issues/shared/contributions", issue: @issue%>
 </div>
