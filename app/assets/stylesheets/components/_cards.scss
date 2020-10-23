@@ -1,41 +1,10 @@
-
-body {
-  background-color: $light-gray;
-  margin: 0;
-  padding: 0;
-}
-
-#header {
-   height: 50px;
-   position: fixed;
-   top:0;
-}
-#body {
-   padding:10px;
-   padding-bottom:40px;   /* Height of the footer */
-   margin-top: 100px;
-   overflow: auto;
-   margin-bottom: 100px;
-   background-color:$light-gray;
-   display: flex;
-   justify-content: center;
-}
-#footer {
-  position: fixed;
-  width:100%;
-  bottom: 0;
-  z-index: -1;
+.issue-card {
+  width: 700px;
+  margin: 10px 10px;
+  display:flex;
 }
 
 
-#content-container {
-  width: 75vw;
-  margin-top: 50px;
-}
-
-
-#issue-container {
-}
 
 /* Extra extra small devices (phones, 360px and down) */
 @media only screen and (max-width: 350px) {
