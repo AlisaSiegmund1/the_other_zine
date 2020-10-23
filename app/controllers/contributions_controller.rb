@@ -32,7 +32,7 @@ class ContributionsController < ApplicationController
     set_issue
     set_contribution
     @contribution.update(contribution_params)
-    redirect_to cms_dashboard_path
+    redirect_to all_contributions_path
   end
 
   def destroy
