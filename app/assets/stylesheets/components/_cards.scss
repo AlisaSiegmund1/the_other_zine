@@ -12,7 +12,6 @@
   .issue-card {
     margin: 20px 10px;
     background-color: white;
-
   }
 
   .issue-info {
@@ -36,13 +35,18 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .issue-card {
-  width: 700px;
-  margin: 20px 10px;
-  display:flex;
+    width: 700px;
+    margin: 20px 10px;
+    display:flex;
   }
 
+  .issue-card:hover {
+    background-color: #ededed;
+
+    }
+
   .issue-info {
-    margin-left: 15px;
+    margin: 20px 15px;
   }
 
   .issue-title{
@@ -53,6 +57,7 @@
   #issue-card-cover {
     height: 150px;
     width: 150px;
+    margin: 20px 20px;
   }
 }
 
