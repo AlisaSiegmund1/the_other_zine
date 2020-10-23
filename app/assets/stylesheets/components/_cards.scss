@@ -1,11 +1,16 @@
 .issue-card {
   width: 700px;
-  margin: 10px 10px;
+  margin: 20px 10px;
   display:flex;
 }
 
 .issue-info {
   margin-left: 15px;
+}
+
+.issue-title{
+  font-weight: bolder;
+  margin-bottom: 20px;
 }
 
 /* Extra extra small devices (phones, 360px and down) */
