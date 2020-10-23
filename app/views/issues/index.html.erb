@@ -3,7 +3,7 @@
     <%= link_to issue_path(issue), class: 'go-away-url' do %>
       <div class="issue-card">
         <div class="issue-cover">
-          <%= cl_image_tag issue.photo.key, :width=>150, :height=>150, id: "issue-cover-show" %>
+          <%= cl_image_tag issue.photo.key, id: "issue-card-cover" %>
         </div>
         <div class="issue-info">
           <div class="issue-title">
@@ -24,7 +24,7 @@
     <%= link_to issue_path(issue), class: 'go-away-url' do %>
       <div class="issue-card">
         <div class="issue-cover">
-          <%= cl_image_tag issue.photo.key, :width=>150, :height=>150, id: "issue-cover-show" %>
+          <%= cl_image_tag issue.photo.key, id: "issue-card-cover" %>
         </div>
         <div class="issue-info">
           <div class="issue-title">
