@@ -1,3 +1,14 @@
 input#contribution_photo {
     width: 214px;
 }
+
+@media only screen and (min-width: 768px) {
+  .form-flex {
+    display: flex;
+    justify-content-md-center: between;
+  }
+
+  .placeholder {
+    width: 100px;
+  }
+}
