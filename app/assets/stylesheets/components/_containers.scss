@@ -9,12 +9,10 @@ body {
    height: 50px;
    position: fixed;
    top:0;
-
 }
+
 #content-container {
    padding:10px;
-   //padding-bottom:40px;   /* Height of the footer */
-   margin-top: 100px;
    overflow: auto;
    margin-bottom: 100px;
    background-color:$light-gray;
@@ -28,7 +26,6 @@ body {
   z-index: -1;
 }
 
-
 #content {
   width: 75vw;
   margin-top: 50px;
@@ -37,8 +34,6 @@ body {
 .contributions-container {
   margin-top: 100px;
 }
-
-
 
 #issue-container {
 }
@@ -51,12 +46,18 @@ body {
 @media only screen and (min-width: 350px) {
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #content-container {
+   margin-top: 160px;
+ }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  #content-container {
+   margin-top: 100px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
