@@ -1,5 +1,5 @@
 <div class="issue-cover">
-  <%= cl_image_tag @issue.photo.key, :width=>100, id: "issue-cover-show" %>
+  <%= cl_image_tag @issue.photo.key, :width=>250, :height=>250, id: "issue-cover-show" %>
 </div>
 <div class="issue-title">
   <h1>ISSUE # <%= @issue.id %><%= @issue.title %></h1>
