@@ -16,13 +16,12 @@
   </head>
 
   <body>
-     <div id='page-container'>
       <div id='header'>
         <%= render 'shared/navbar' %>
         <%= render 'shared/flashes' %>
       </div>
-      <div id='body'>
-        <div id='content-container'>
+      <div id='content-container'>
+        <div id='content'>
           <%= yield %>
         </div>
       </div>
