@@ -40,5 +40,4 @@ class PagesController < ApplicationController
     @contributions = Contribution.all
   end
 
-
 end

@@ -2,52 +2,52 @@
  <div class="row justify-content-md-center">
   <div class="text-center">
     <h4>Contributions</h4>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
     <div class="btn-v1">
       <%= link_to "submit contribution", new_issue_contribution_path(@issue) %>
     </div>
 
+  </div>
+</div>
+
+
+<% @issue.contributions.each do |contribution| %>
+<% if contribution.published == true && contribution.approved == true%>
+<div class="contribution-card">
+  <div class="tags d-flex">
+    <div class="tag">
+      # <%= contribution.con_type %>
+    </div>
+    <div class="tag">
+      # Issue No.<%= contribution.issue_id %>
     </div>
   </div>
-
-
-  <% @issue.contributions.each do |contribution| %>
-    <% if contribution.published == true && contribution.approved == true%>
-      <div class="contribution-card">
-        <div class="tags d-flex">
-          <div class="tag">
-            # <%= contribution.con_type %>
-          </div>
-          <div class="tag">
-            # Issue No.<%= contribution.issue_id %>
-          </div>
-        </div>
-      <div class="contribution-content">
-        <%= contribution.content %>
-      </div>
-      <div class="contribution-link">
-        <% if !contribution.link.empty?%>
-          <a href=<%= contribution.link %>><%= contribution.link %> </a>
-        <% end %>
-      </div>
-       <div class="contribution-embed">
-        <% if !contribution.embed.nil?%>
-        <iframe <%contribution.embed%>>
-        </iframe>
-         <%= contribution.embed %>
-        <% end %>
-      </div>
-
-      <div class="contribution-photo">
-        <% if contribution.photo.attached?%>
-          <%= cl_image_tag contribution.photo.key%>
-        <% end %>
-      </div>
-      <div class="contribution-author">
-      <%= contribution.name %>
-      </div>
-    </div>
+  <div class="contribution-content">
+    <%= contribution.content %>
+  </div>
+  <div class="contribution-link">
+    <% if !contribution.link.empty?%>
+    <a href=<%= contribution.link %>><%= contribution.link %> </a>
     <% end %>
-  <% end %>
+  </div>
+  <div class="contribution-embed">
+    <% if !contribution.embed.nil?%>
+    <iframe <%contribution.embed%>>
+    </iframe>
+    <%= contribution.embed %>
+    <% end %>
+  </div>
+
+  <div class="contribution-photo">
+    <% if contribution.photo.attached?%>
+    <%= cl_image_tag contribution.photo.key%>
+    <% end %>
+  </div>
+  <div class="contribution-author">
+    <%= contribution.name %>
+  </div>
+</div>
+<% end %>
+<% end %>
 </div>
 

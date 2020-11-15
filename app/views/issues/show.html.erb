@@ -28,25 +28,22 @@
   <h2>Contributions</h2>
 
   <% @issue.contribution.contribution_info.each do |info| %>
-  <% if info.published == true %>
-  <div class="contribution">
-    <div class="type-tag">
-      <%#= contribution.contribution_type %>
-    </div>
-    <div class="contribution-content">
-      <%# if contribution.contribution_type == 'music' %>
-      <a href=<%= contribution.contribution_content %>> <%= contribution.contribution_content %></a>
-      <%# else %>
-      <%#= contribution.contribution_content %>
-      <%# end %>
-    </div>
-    <div class="contribution-author">
-      <%= info.author %>
-    </div>
-  </div>
+    <% if info.published == true %>
+      <div class="contribution">
+        <div class="type-tag">
+          <%#= contribution.contribution_type %>
+        </div>
+        <div class="contribution-content">
+          <%# if contribution.contribution_type == 'music' %>
+          <a href=<%= contribution.contribution_content %>> <%= contribution.contribution_content %></a>
+          <%# else %>
+          <%#= contribution.contribution_content %>
+          <%# end %>
+        </div>
+        <div class="contribution-author">
+          <%= info.author %>
+        </div>
+      </div>
+    <% end %>
   <% end %>
-  <% end %>
-</div>
-
-</div>
 </div>

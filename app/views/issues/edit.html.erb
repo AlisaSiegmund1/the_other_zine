@@ -1,9 +1,9 @@
  <div class="issue-form">
-     <%= simple_form_for (@issue) do |f| %>
-       <%= f.input :title %>
-       <%= f.input :short_description%>
+    <%= simple_form_for (@issue) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :short_description%>
       <%= f.input :photo, as: :file, label: 'Cover Image'%>
       <%= f.input :publish %>
       <%= f.submit 'save', class: ""%>
-      <% end %>
+    <% end %>
  </div>
