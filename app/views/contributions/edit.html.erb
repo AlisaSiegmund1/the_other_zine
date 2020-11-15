@@ -2,39 +2,35 @@
 <p>
   I want to contribute something to...
 </p>
-<%= f.input :con_type, collection: ['see', 'read', 'view', 'cooperate', 'watch'], label:false%>
+<%= f.input :con_type, collection: ['listen to', 'read', 'view', 'cooperate', 'watch'], label:false%>
 <p>
   Tell us something about your contribution:
 </p>
 <%= f.input :content, label:false %>
 
-<div class="d-flex justify-content-between">
-  <div>
     <p>
       Link ressources:
     </p>
     <%= f.input :link, label:false  %>
-  </div>
-  <div>
-    <p>
-      Upload images:
-    </p>
-    <%= f.input :photo, as: :file, label:false  %>
-  </div>
+
 
   <p>
+    URL for iframe embed:
+  </p>
+  <%= f.input :embed, label:false  %>
 
-  </div>
-  What's your name?
-</p>
-<%= f.input :name, label:false  %>
-<p>
-  What's your Email?
-</p>
-<%= f.input :email, label:false  %>
 
-<%= f.input :published%>
-<%= f.input :approved%>
+  <p>
+    What's your name?
+  </p>
+  <%= f.input :name, label:false  %>
+  <p>
+    What's your Email?
+  </p>
+  <%= f.input :email, label:false  %>
+
+  <%= f.input :published%>
+  <%= f.input :approved%>
 
 
 <%= f.submit "Save changes"%>

@@ -4,7 +4,7 @@
     <h4>Contributions</h4>
       <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
     <div class="btn-v1">
-      <%= link_to "submit a contribution", new_issue_contribution_path(@issue) %>
+      <%= link_to "submit contribution", new_issue_contribution_path(@issue) %>
     </div>
 
     </div>
@@ -30,6 +30,14 @@
           <a href=<%= contribution.link %>><%= contribution.link %> </a>
         <% end %>
       </div>
+       <div class="contribution-embed">
+        <% if !contribution.embed.nil?%>
+        <iframe <%contribution.embed%>>
+        </iframe>
+         <%= contribution.embed %>
+        <% end %>
+      </div>
+
       <div class="contribution-photo">
         <% if contribution.photo.attached?%>
           <%= cl_image_tag contribution.photo.key%>
