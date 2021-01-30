@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_08_202918) do
+ActiveRecord::Schema.define(version: 2021_01_30_214747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 2020_11_08_202918) do
     t.string "email"
     t.boolean "published"
     t.string "con_type"
-    t.text "embed"
     t.index ["issue_id"], name: "index_contributions_on_issue_id"
   end
 
