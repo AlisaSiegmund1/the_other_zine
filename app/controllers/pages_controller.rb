@@ -32,12 +32,12 @@ class PagesController < ApplicationController
 
 
   def all_contributions
-    @contributions = Contribution.all.sort
+    @contributions = Contribution.order('created_at DESC')
   end
 
 
   def unapproved_contributions
-    @contributions = Contribution.where(approved: false)
+    @contributions = Contribution.where(approved: false).order('created_at DESC')
   end
 
 end

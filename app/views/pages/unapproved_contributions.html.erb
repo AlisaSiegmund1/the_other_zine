@@ -2,6 +2,7 @@
   <tr>
     <th>No. #</th>
     <th>Approved</th>
+    <th>Date</th>
     <th>Content</th>
     <th>Email</th>
     <th>Issue</th>
@@ -10,12 +11,13 @@
     <th>Edit</th>
     <th>Delete</th>
   </tr>
-  <% i = 0 %>
+  <% i = @contributions.count + 1 %>
   <% @contributions.each do |contribution| %>
-  <% i += 1 %>
+  <% i -= 1 %>
   <tr>
     <td><%= i %> </td>
     <td><%= contribution.approved? ? "yes" : "no" %></td>
+    <td><%= contribution.created_at.day%> / <%= contribution.created_at.month %> / <%= contribution.created_at.year %></td>
     <td><%= contribution.content[0..30] ...%></td>
     <td><%= contribution.email%></td>
     <td>Issue #<%= contribution.issue_id %></td>
