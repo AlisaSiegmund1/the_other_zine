@@ -29,6 +29,9 @@ gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#Ruby gem generating image thumbnails from a given URL.
+gem 'link_thumbnailer'
+
 #Environment variables
 gem 'dotenv-rails', groups: [:development, :test]
 

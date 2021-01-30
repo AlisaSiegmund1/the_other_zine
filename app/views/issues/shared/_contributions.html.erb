@@ -1,3 +1,5 @@
+require 'link_thumbnailer'
+
 <div class="contributions-container">
  <div class="row justify-content-md-center">
   <div class="text-center">
@@ -27,16 +29,19 @@
   </div>
   <div class="contribution-link">
     <% if !contribution.link.empty?%>
-    <a href=<%= contribution.link %>><%= contribution.link %> </a>
+    <% object = LinkThumbnailer.generate(contribution.link) %>
+      <%= link_to contribution.link , class: 'link-thumbnail go-away-url' do %>
+        <div class="link-thumbnail">
+          <img src=<%= object.images.first.src.to_s %>>
+          <%= object.title %>
+          <%= object.description %>
+          <%= contribution.link %>
+        </div>
+    <% end %>
+
     <% end %>
   </div>
-  <div class="contribution-embed">
-    <% if !contribution.embed.nil?%>
-    <iframe <%contribution.embed%>>
-    </iframe>
-    <%= contribution.embed %>
-    <% end %>
-  </div>
+
 
   <div class="contribution-photo">
     <% if contribution.photo.attached?%>
