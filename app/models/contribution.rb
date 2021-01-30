@@ -5,5 +5,5 @@ class Contribution < ApplicationRecord
   validates :content, presence: true
   validates :name, presence: true
   validates :email, presence: true
-
+  validates :policy_agreement, presence: true
 end
