@@ -9,7 +9,39 @@
   text-decoration: underline;
 }
 
+.contribution-link {
+  border: 1px solid black;
+}
+
+.link-thumbnail {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.link-thumbnail-description {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.link-title {
+  font-weight: bolder;
+  margin: 10px 0px;
+}
+
+.link-description {
+  font-style: italic;
+}
+.link {
+  padding-top: 10px;
+  color: grey;
+  a {
+    text-decoration: underline;
+  }
+}
 
 .link-thumbnail img {
   width: 20%;
+  margin: 10px 5px;
 }
+
