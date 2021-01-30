@@ -37,7 +37,7 @@ class PagesController < ApplicationController
 
 
   def unapproved_contributions
-    @contributions = Contribution.all
+    @contributions = Contribution.where(approved: false)
   end
 
 end

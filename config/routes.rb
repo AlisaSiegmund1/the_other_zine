@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get 'privacy-policy', to: 'pages#privacy_policy'
     get 'cms-dashboard', to: 'pages#cms_dashboard'
     get 'all-contributions', to: 'pages#all_contributions'
+    get 'unapproved-contributions', to: 'pages#unapproved_contributions'
 
     get 'archive', to: 'issues#index'
     get 'issues/1', to: 'issues#first'
