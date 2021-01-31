@@ -4,11 +4,11 @@
 LinkThumbnailer.configure do |config|
   # Numbers of redirects before raising an exception when trying to parse given url.
   #
-  # config.redirect_limit = 3
+  config.redirect_limit = 3
 
   # Set user agent
   #
-  # config.user_agent = 'link_thumbnailer'
+  #config.user_agent = 'link_thumbnailer'
 
   # Enable or disable SSL verification
   #
@@ -20,7 +20,7 @@ LinkThumbnailer.configure do |config|
   #
   # See http://www.ruby-doc.org/stdlib-2.1.1/libdoc/net/http/rdoc/Net/HTTP.html#open_timeout
   #
-  # config.http_open_timeout = 5
+  #config.http_open_timeout = 10
 
   # List of blacklisted urls you want to skip when searching for images.
   #

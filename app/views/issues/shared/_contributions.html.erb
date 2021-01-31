@@ -1,5 +1,3 @@
-require 'link_thumbnailer'
-
 <div class="contributions-container">
  <div class="row justify-content-md-center">
   <div class="text-center">
@@ -23,9 +21,6 @@ require 'link_thumbnailer'
     <div class="tag">
       # Issue No.<%= contribution.issue_id %>
     </div>
-  </div>
-  <div class="contribution-author">
-    <%= contribution.name %>
   </div>
   <div class="contribution-content">
     <%= contribution.content %>
@@ -58,6 +53,9 @@ require 'link_thumbnailer'
     <% if contribution.photo.attached?%>
     <%= cl_image_tag contribution.photo.key%>
     <% end %>
+  </div>
+  <div class="contribution-author">
+    <%= contribution.name %>
   </div>
 </div>
 <% end %>
