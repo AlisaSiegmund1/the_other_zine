@@ -24,8 +24,8 @@
   <div class="contribution-content">
     <%= contribution.content %>
   </div>
-  <div class="contribution-link">
-    <% if !contribution.link.empty?%>
+  <% if !contribution.link.empty?%>
+    <div class="contribution-link">
     <% object = LinkThumbnailer.generate(contribution.link) %>
       <%= link_to contribution.link , class: 'link-thumbnail go-away-url' do %>
         <div class="link-thumbnail">
@@ -46,7 +46,6 @@
 
     <% end %>
   </div>
-
 
   <div class="contribution-photo">
     <% if contribution.photo.attached?%>
