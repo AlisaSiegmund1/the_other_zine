@@ -2,43 +2,43 @@
   <div class="col-lg-6">
     <%= simple_form_for ([@issue, @contribution]) do |f| %>
 
-      <p>I want to contribute something to...</p>
-      <%= f.input :con_type, collection: ['listen to', 'read', 'view', 'cooperate', 'watch'], label:false%>
+    <p>I want to contribute something to...</p>
+    <%= f.input :con_type, collection: ['listen to', 'read', 'view', 'cooperate', 'watch'], label:false%>
 
-      <p>Tell us something about your contribution:</p>
-      <%= f.input :content, label:false %>
+    <p>Tell us something about your contribution:</p>
+    <%= f.input :content, label:false %>
 
-      <div class="form-flex">
-        <div>
-          <p>Link ressources:</p>
-          <%= f.input :link, label:false  %>
-        </div>
-         <div class="placeholder">
-        </div>
-        <div>
-          <p>Upload images:</p>
-          <%= f.input :photo, as: :file, label:false %>
-        </div>
+    <div class="form-flex">
+      <div>
+        <p>Link ressources:</p>
+        <%= f.input :link, label:false  %>
       </div>
-
-      <div class="form-flex">
-        <div>
-          <p>What's your name?</p>
-          <%= f.input :name, label:false  %>
-        </div>
-        <div class="placeholder">
-        </div>
-        <div>
-          <p>What's your Email?</p>
-          <%= f.input :email, label:false  %>
-        </div>
+      <div class="placeholder">
       </div>
+      <div>
+        <p>Upload images:</p>
+        <%= f.input :photo, as: :file, label:false %>
+      </div>
+    </div>
 
-      <%= f.input :published, label: "Yes, I want my contribution to be public"  %>
-      <%= f.input :policy_agreement, label: "I agree to the terms...."  %>
+    <div class="form-flex">
+      <div>
+        <p>What's your name?</p>
+        <%= f.input :name, label:false  %>
+      </div>
+      <div class="placeholder">
+      </div>
+      <div>
+        <p>What's your Email?</p>
+        <%= f.input :email, label:false  %>
+      </div>
+    </div>
 
-      <p>** We will review all contributions out of... reasons **</p>
-      <%= f.submit "Submit contribution", :class => "btn-v1" %>
+    <%= f.input :published, label: "Yes, I want my contribution to be public"  %>
+    <%= f.input :policy_agreement, label: "I agree to the terms...."  %>
+
+    <p>** We will review all contributions out of... reasons **</p>
+    <%= f.submit "Submit contribution", :class => "btn-v1" %>
     <% end %>
   </div>
 </div>

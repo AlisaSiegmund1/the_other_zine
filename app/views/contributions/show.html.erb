@@ -14,24 +14,24 @@
   <div class="contribution-content">
     <%= @contribution.content %>
   </div>
+  <% if !@contribution.link.empty?%>
   <div class="contribution-link">
-    <% if !@contribution.link.empty?%>
     <% object = LinkThumbnailer.generate(@contribution.link) %>
-      <%= link_to @contribution.link , class: 'link-thumbnail go-away-url' do %>
-        <div class="link-thumbnail">
-          <img src=<%= object.images.first.src.to_s %>>
-          <div class="link-thumbnail-description">
-            <div class="link-title">
-              <%= object.title %>
-            </div>
-            <div class="link-description">
-              <%= object.description %>
-            </div>
-            <div class="link">
-              <%= @contribution.link %>
-            </div>
-          </div>
+    <%= link_to @contribution.link , class: 'link-thumbnail go-away-url' do %>
+    <div class="link-thumbnail">
+      <img src=<%= object.images.first.src.to_s %>>
+      <div class="link-thumbnail-description">
+        <div class="link-title">
+          <%= object.title %>
         </div>
+        <div class="link-description">
+          <%= object.description %>
+        </div>
+        <div class="link">
+          <%= @contribution.link %>
+        </div>
+      </div>
+    </div>
     <% end %>
 
     <% end %>

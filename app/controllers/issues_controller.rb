@@ -11,11 +11,6 @@ class IssuesController < ApplicationController
     @issues = @publishedIssues.sort
   end
 
-  # def show
-  #   set_issue
-  #   @contribution = Contribution.new
-  # end
-
   def new
     @issue = Issue.new
   end
