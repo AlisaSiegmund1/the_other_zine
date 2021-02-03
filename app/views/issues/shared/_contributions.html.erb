@@ -17,42 +17,41 @@
             # <%= contribution.con_type %>
           </div>
           <div class="tag">
-          # Issue No.<%= contribution.issue_id %>
+            # Issue No.<%= contribution.issue_id %>
+          </div>
         </div>
+      <div class="contribution-author">
+        <%= contribution.name %>
       </div>
       <div class="contribution-content">
         <%= contribution.content %>
       </div>
       <% if !contribution.link.empty?%>
-      <div class="contribution-link">
-        <% object = LinkThumbnailer.generate(contribution.link) %>
-        <%= link_to contribution.link , class: 'link-thumbnail go-away-url' do %>
-        <div class="link-thumbnail">
-          <img src=<%= object.images.first.src.to_s %>>
-          <div class="link-thumbnail-description">
-            <div class="link-title">
-              <%= object.title %>
+        <div class="contribution-link">
+          <% object = LinkThumbnailer.generate(contribution.link) %>
+          <%= link_to contribution.link , class: 'link-thumbnail go-away-url' do %>
+            <div class="link-thumbnail">
+              <img src=<%= object.images.first.src.to_s %>>
+              <div class="link-thumbnail-description">
+              <div class="link-title">
+                <%= object.title %>
+              </div>
+              <div class="link-description">
+                <%= object.description %>
+              </div>
+              <div class="link">
+                <%= contribution.link %>
+              </div>
             </div>
-            <div class="link-description">
-              <%= object.description %>
-            </div>
-            <div class="link">
-              <%= contribution.link %>
-            </div>
+            <% end %>
           </div>
         </div>
-        <% end %>
-
-        <% end %>
-      </div>
+      <% end %>
 
       <div class="contribution-photo">
         <% if contribution.photo.attached?%>
-        <%= cl_image_tag contribution.photo.key%>
+          <%= cl_image_tag contribution.photo.key%>
         <% end %>
-      </div>
-      <div class="contribution-author">
-        <%= contribution.name %>
       </div>
     </div>
     <% end %>
