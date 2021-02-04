@@ -1,3 +1,4 @@
+// Contribution text content ---------------------------------------------------
 .text-center{
   display: flex;
   flex-direction: column;
@@ -5,14 +6,11 @@
   width: 800px;
 }
 
-
-//Contribution Photo
-
-
+// Image contribution ----------------------------------------------------------
 .contribution-photo img {
   width:200px;
 }
-//Contribution Link
+// Link contribution including thumbnail, title, description & link-------------
 .contribution-author {
   margin-top: 15px;
 }
@@ -56,5 +54,29 @@
 .link-thumbnail img {
   width: 20%;
   margin: 10px 5px;
+}
+
+/* Extra extra small devices (phones, 360px and down) */
+@media only screen and (max-width: 350px) {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 350px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
 
